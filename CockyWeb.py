@@ -48,4 +48,6 @@ Ffinal = open("index.html", "w")
 Ffinal.write(Fjoined)
 Ffinal.close()
 
-call(["ls"])
+call(["git add ./"])
+call(["git commit -m \"Autocommit - testing\""])
+call(["git push origin master"])
