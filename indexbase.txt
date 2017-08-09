@@ -56,9 +56,12 @@
           <h1>Instagram</h1>
           <p if= "IGfollowers" class="counter">Followers:
           <p if= "IGlikes" class="counter">Likes:
-          <p if= "IGreproductions" class="counter">reproductions:
+          <p if= "IGreproductions" class="counter">Reproductions:
           <p if= "IGcomments" class="counter">Comments:
         </div>
+  </div>
+  <div class="footer">
+  <p id="Footer_Text">Last update:
   </div>
 </body>
 </html>
