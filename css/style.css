@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Space+Mono);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+*{
+	margin: 0;
+}
+
+#title{
+	font-family: 'Space Mono',serif;
+  margin: 20px 0px 0px 0px;
+	text-align: center;
+	font-size: 60px;
+	height: auto;
+	background:#40514e;
+	color:#e4f9f5;
+}
+
+#title a{
+	text-decoration: none;
+}
+
+a{
+		color:#40514e;
+}
+
+#subtitle a{
+	text-decoration: none;
+}
+
+html, body{
+ height: 98.5%;
+	background:#e4f9f5;
+	color:#40514e;
+}
+
+.StatSection{
+  margin: 30px 30px 0px 30px;
+  padding: 10px;
+  height: 300px;
+  width: auto;
+	display: block;
+	display: inline-table;
+}
+
+#autoSections{
+	float: left;
+  margin: 30px 0px 10px 0px;
+  padding: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.wrapper{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
+}
+
+.footer{
+	position: relative;
+ 	height: 30px;
+ 	padding:5px;
+ 	clear: both;
+ 	background: #11999e;
+ 	text-align: center;
+ 	color: #e4f9f5;
+}
+.footer a{
+  color: #e4f9f5;
+}
+
+#central_section{
+	margin: 0px 0px 50px 0px;
+  padding:20px;
+ 	color: #e4f9f5;
+	margin: 0 auto;
+  max-width: 800px;
+
+}
+
+h1{
+	margin: 0px 0px 15px 0px;
+	text-align: left;
+	font-family: 'Space Mono',serif;
+	font-size: 35px;
+}
+
+h1 a{
+	text-decoration: none;
+}
+
+h2{
+	margin: 0px 0px 15px 0px;
+	text-align: center;
+	font-family: 'Space Mono',serif;
+	color:#40514e;
+  font-size: 35px;
+
+}
+
+h2 a{
+	text-decoration: none;
+}
+
+p{
+	margin: 0px 0px 10px 0px;
+	text-align: center;
+	font-family: 'Open Sans',serif;
+	color:#40514e;
+	font-size: 18px;
+}
+
+p a{
+	text-decoration: none;
+}
+
+#column_container {
+	float: center;
+  width: 90%;
+  margin: 0 auto;
+	text-align: center;
+}
+
+#Footer_Text{
+	color: #e4f9f5;
+}
