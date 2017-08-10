@@ -9,9 +9,10 @@ import googlegroups
 import instagram
 import re
 from subprocess import call
-from time import gmtime, strftime
-
-# Users & Names variables. Fill them with your usernames if you want the stats of that platform. Leave it blank if you don't want the stats.
+from time import time, gmtime, strftime
+from datetime import date, timedelta, datetime
+import glob
+import os, errno
 
 TVuser = 'AngelLM'                                      # Thingiverse username. https://www.thingiverse.com/USERNAME/
 GHuser = 'AngelLM'                                      # GitHub username. https://github.com/USERNAME
@@ -37,14 +38,47 @@ HDstats = hackaday.getStats(HDuser)
 TWstats = twitter.getStats(TWuser)
 GGstats = googlegroups.getStats(GGname)
 IGstats = instagram.getStats(IGuser)
-#
-dateNow = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+
+
+dateNow=datetime.now()
+dateNowStr =  dateNow.strftime('%Y-%m-%d %H:%M:%S')
+
 StatsData = [GHstats[0], GHstats[1], GHstats[2], GHstats[3], GHstats[4], TVstats[0], TVstats[1], TVstats[2], TVstats[3], TVstats[4], TVstats[5], TVstats[6], YTstats[0], YTstats[1], YTstats[2], YTstats[3], HDstats[0], HDstats[1], HDstats[2], HDstats[3], HDstats[4], TWstats, GGstats[0], GGstats[1], IGstats[0], IGstats[1], IGstats[2], IGstats[3]]
 
-for s in range(len(Fsplitted)-2):
-    Fsplitted[s]=Fsplitted[s]+': '+str(StatsData[s])+'</p>'
 
-Fsplitted[len(Fsplitted)-2]=Fsplitted[len(Fsplitted)-2]+': '+dateNow+'</p>'
+yesterdayDate = date.today()-timedelta(days=1)
+yearYesterday = yesterdayDate.strftime("%Y")
+monthYesterday = yesterdayDate.strftime("%m")
+dayYesterday = yesterdayDate.strftime("%d")
+
+pathYesterday = 'logs/' + yearYesterday + '/' + monthYesterday + '/' + dayYesterday + '/' + '*.txt'
+filesPath = glob.glob(pathYesterday)
+
+Fyesterday = open(filesPath[len(filesPath)-1], "r")
+statsYesterday = re.findall(r'\d+', Fyesterday.read())
+
+for k in range(len(statsYesterday)):
+    statsYesterday[k] = int(statsYesterday[k])
+
+statsDiffYesterday = []
+
+for t in range(len(StatsData)):
+    statsDiffYesterday.append(StatsData[t]-statsYesterday[t])
+
+diffYestCounter = []
+
+for diff in statsDiffYesterday:
+    if diff > 0:
+        diffYestCounter.append('<sup class="diffpos"> +'+str(diff)+'</sup>')
+    elif diff < 0:
+        diffYestCounter.append('<sup class="diffneg"> '+str(diff)+'</sup>')
+    else:
+        diffYestCounter.append(' ')
+
+for s in range(len(Fsplitted)-2):
+    Fsplitted[s]=Fsplitted[s]+': '+str(StatsData[s])+diffYestCounter[s]+'</p>'
+
+Fsplitted[len(Fsplitted)-2]=Fsplitted[len(Fsplitted)-2]+': '+dateNowStr+ ' (GMT+1)' + '</p>'
 
 Fjoined = separator.join(Fsplitted)
 
@@ -53,6 +87,37 @@ Ffinal = open("index.html", "w")
 Ffinal.write(Fjoined)
 Ffinal.close()
 
+
+
+Flogbase = open("logs/logbase.txt", "r")
+Logbase = Flogbase.read()
+Flogbase.close()
+LogbaseSplitted = Logbase.split("!")
+
+for w in range(len(LogbaseSplitted)-1):
+    LogbaseSplitted[w]=LogbaseSplitted[w]+str(StatsData[w])
+Logbasejoined = separator.join(LogbaseSplitted)
+
+yearNow = dateNow.strftime("%Y")
+monthNow = dateNow.strftime("%m")
+dayNow = dateNow.strftime("%d")
+FullDateNow = dateNow.strftime('%Y-%m-%d_%H-%M-%S')
+
+PathFolder = 'logs/' + yearNow + '/' + monthNow + '/' + dayNow
+PathNow = PathFolder + '/' + FullDateNow + '.txt'
+
+try:
+    os.makedirs(PathFolder)
+except OSError as e:
+    if e.errno != errno.EEXIST:
+        raise
+
+Flog = open(PathNow, "w+")
+Flog.write(Logbasejoined)
+Flog.close()
+
+
+
 call(["git", "add", "./"])
-call(["git", "commit", "-m", "Automatic commit "+dateNow])
+call(["git", "commit", "-m", "Automatic commit "+dateNowStr])
 call(["git", "push", "origin", "master"])

@@ -125,3 +125,13 @@ p a{
 #Footer_Text{
 	color: #e4f9f5;
 }
+
+.diffpos{
+	color:green;
+	font-size: 12px;
+}
+
+.diffneg{
+	color:red;
+	font-size: 12px;
+}
