@@ -1,60 +1,6 @@
-# The-Cocky-Script
+# The-Cocky-Website
 
-## Libraries
-[Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/) and [Selenium](http://selenium-python.readthedocs.io/) libraries have to be installed.
-
-## Capabilities
-
-Currently the script is capable to scrap:
-* Thingiverse
-  * Views
-  * Downloads
-  * Likes
-  * Collects
-  * Makes
-  * Remixes
-  * Comments
-
-
-* GitHub
-  * Followers
-  * Watchers
-  * Likes
-  * Collects
-  * Stars
-  * Forks
-  * Contributors
-
-
-* Hackaday
-  * Profile followers
-  * Likes
-  * Views
-  * Projects followers
-  * Comments
-
-
-* Youtube
-  * Suscriptors
-  * Views
-  * Likes
-  * Dislikes
-
-
-* Twitter
-  * Followers
-
-
-* Google Groups
-  * Members
-  * Threads
-
-
-* Instagram
-  * Followers
-  * Likes
-  * Video reproductions
-  * Comments
+Automatically generated website based on [The-Cocky-Script](https://github.com/AngelLM/The-Cocky-Script)
 
 ## License
 

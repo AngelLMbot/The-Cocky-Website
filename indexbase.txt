@@ -7,64 +7,65 @@
 </head>
 <body>
 
+<a href="https://github.com/AngelLMbot/The-Cocky-Website"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 <div class="wrapper">
 <p id = "title">Ángel L.M. - Stats</p>
     <div id="column_container">
         <div id="GithubSection" class="StatSection">
           <h1>Github</h1>
-          <p id="GHfollowers" class="counter">Followers:
-          <p id="GHwatchers" class="counter">Watchers:
-          <p id="GHStars" class="counter">Stars:
-          <p id="GHforks" class="counter">Forks:
-          <p id="GHcontributors" class="counter">Contributors:
+          <p id="GHfollowers" class="counter">Followers: !!!
+          <p id="GHwatchers" class="counter">Watchers: !!!
+          <p id="GHStars" class="counter">Stars: !!!
+          <p id="GHforks" class="counter">Forks: !!!
+          <p id="GHcontributors" class="counter">Contributors: !!!
         </div>
         <div id="ThingiverseSection" class="StatSection">
           <h1>Thingiverse</h1>
-          <p id= "TVviews" class="counter">Views:
-          <p id= "TVdownloads" class="counter">Downloads:
-          <p id= "TVlikes" class="counter">Likes:
-          <p id= "TVcollects" class="counter">Collects:
-          <p id= "TVmakes" class="counter">Makes:
-          <p id= "TVremixes" class="counter">Remixes:
-          <p id= "TVcomments" class="counter">Comments:
+          <p id= "TVviews" class="counter">Views: !!!
+          <p id= "TVdownloads" class="counter">Downloads: !!!
+          <p id= "TVlikes" class="counter">Likes: !!!
+          <p id= "TVcollects" class="counter">Collects: !!!
+          <p id= "TVmakes" class="counter">Makes: !!!
+          <p id= "TVremixes" class="counter">Remixes: !!!
+          <p id= "TVcomments" class="counter">Comments: !!!
         </div>
         <div id="YoutubeSection" class="StatSection">
           <h1>Youtube</h1>
-          <p id= "YTsuscriptors" class="counter">Suscriptors:
-          <p id= "YTviews" class="counter">Views:
-          <p id= "YTlikes" class="counter">Likes:
-          <p id= "YTdislikes" class="counter">Dislikes:
+          <p id= "YTsuscriptors" class="counter">Suscriptors: !!!
+          <p id= "YTviews" class="counter">Views: !!!
+          <p id= "YTlikes" class="counter">Likes: !!!
+          <p id= "YTdislikes" class="counter">Dislikes: !!!
         </div>
         <div id="HackadaySection" class="StatSection">
           <h1>Hackaday</h1>
-          <p id= "HDfollowers" class="counter">Followers:
-          <p id= "HDlikes" class="counter">Likes:
-          <p id= "HDviews" class="counter">Views:
-          <p id= "HDsuscriptions" class="counter">Suscriptions:
-          <p id= "HDcomments" class="counter">Comments:
+          <p id= "HDfollowers" class="counter">Followers: !!!
+          <p id= "HDlikes" class="counter">Likes: !!!
+          <p id= "HDviews" class="counter">Views: !!!
+          <p id= "HDsuscriptions" class="counter">Suscriptions: !!!
+          <p id= "HDcomments" class="counter">Comments: !!!
         </div>
         <div id="TwitterSection" class="StatSection">
           <h1>Twitter</h1>
-          <p id= "TWfollowers" class="counter">Followers:
-          <p id= "TWlikes" class="counter">Likes:
-          <p id= "TWretweets" class="counter">Retweets:
-          <p id= "TWcomments" class="counter">Comments:
+          <p id= "TWfollowers" class="counter">Followers: !!!
+          <p id= "TWlikes" class="counter">Likes: !!!
+          <p id= "TWretweets" class="counter">Retweets: !!!
+          <p id= "TWcomments" class="counter">Comments: !!!
         </div>
         <div id="GoogleGroupsSection" class="StatSection">
           <h1>Google Groups</h1>
-          <p id= "GGmembers" class="counter">Members:
-          <p id= "GGthreads" class="counter">Threads:
+          <p id= "GGmembers" class="counter">Members: !!!
+          <p id= "GGthreads" class="counter">Threads: !!!
         </div>
         <div id="InstagramSection" class="StatSection">
           <h1>Instagram</h1>
-          <p id= "IGfollowers" class="counter">Followers:
-          <p id= "IGlikes" class="counter">Likes:
-          <p id= "IGreproductions" class="counter">Reproductions:
-          <p id= "IGcomments" class="counter">Comments:
+          <p id= "IGfollowers" class="counter">Followers: !!!
+          <p id= "IGlikes" class="counter">Likes: !!!
+          <p id= "IGreproductions" class="counter">Reproductions: !!!
+          <p id= "IGcomments" class="counter">Comments: !!!
         </div>
   </div>
   <div class="footer">
-  <p id="Footer_Text">Last update:
+  <p id="Footer_Text">Last update: !!!
   </div>
 </body>
 </html>

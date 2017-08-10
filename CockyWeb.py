@@ -29,7 +29,7 @@ Fbase = open("indexbase.txt", "r")
 Textbase = Fbase.read()
 Fbase.close()
 
-Fsplitted = Textbase.split(":")
+Fsplitted = Textbase.split("!!!")
 
 GHstats = github.getStats(GHuser)
 TVstats = thingiverse.getStats(TVuser)
@@ -76,9 +76,9 @@ for diff in statsDiffYesterday:
         diffYestCounter.append(' ')
 
 for s in range(len(Fsplitted)-2):
-    Fsplitted[s]=Fsplitted[s]+': '+str(StatsData[s])+diffYestCounter[s]+'</p>'
+    Fsplitted[s]=Fsplitted[s]+str(StatsData[s])+diffYestCounter[s]+'</p>'
 
-Fsplitted[len(Fsplitted)-2]=Fsplitted[len(Fsplitted)-2]+': '+dateNowStr+ ' (GMT+1)' + '</p>'
+Fsplitted[len(Fsplitted)-2]=Fsplitted[len(Fsplitted)-2]+dateNowStr+ ' (GMT+1)' + '</p>'
 
 Fjoined = separator.join(Fsplitted)
 
