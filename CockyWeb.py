@@ -43,7 +43,7 @@ IGstats = instagram.getStats(IGuser)
 dateNow=datetime.now()
 dateNowStr =  dateNow.strftime('%Y-%m-%d %H:%M:%S')
 
-StatsData = [GHstats[0], GHstats[1], GHstats[2], GHstats[3], GHstats[4], TVstats[0], TVstats[1], TVstats[2], TVstats[3], TVstats[4], TVstats[5], TVstats[6], YTstats[0], YTstats[1], YTstats[2], YTstats[3], HDstats[0], HDstats[1], HDstats[2], HDstats[3], HDstats[4], TWstats, GGstats[0], GGstats[1], IGstats[0], IGstats[1], IGstats[2], IGstats[3]]
+StatsData = [GHstats[0], GHstats[1], GHstats[2], GHstats[3], GHstats[4], TVstats[0], TVstats[1], TVstats[2], TVstats[3], TVstats[4], TVstats[5], TVstats[6], YTstats[0], YTstats[1], YTstats[2], YTstats[3], HDstats[0], HDstats[1], HDstats[2], HDstats[3], HDstats[4], TWstats[0], TWstats[1], TWstats[2], TWstats[3], GGstats[0], GGstats[1], IGstats[0], IGstats[1], IGstats[2], IGstats[3]]
 
 
 yesterdayDate = date.today()-timedelta(days=1)
@@ -115,8 +115,6 @@ except OSError as e:
 Flog = open(PathNow, "w+")
 Flog.write(Logbasejoined)
 Flog.close()
-
-
 
 call(["git", "add", "./"])
 call(["git", "commit", "-m", "Automatic commit "+dateNowStr])

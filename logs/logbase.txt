@@ -39,6 +39,9 @@ Comments: !
 Twitter
 ----------
 Followers: !
+Likes: !
+Retweets: !
+Comments: !
 
 ----------
 Google Groups

@@ -20,44 +20,47 @@
         </div>
         <div id="ThingiverseSection" class="StatSection">
           <h1>Thingiverse</h1>
-          <p if= "TVviews" class="counter">Views:
-          <p if= "TVdownloads" class="counter">Downloads:
-          <p if= "TVlikes" class="counter">Likes:
-          <p if= "TVcollects" class="counter">Collects:
-          <p if= "TVmakes" class="counter">Makes:
-          <p if= "TVremixes" class="counter">Remixes:
-          <p if= "TVcomments" class="counter">Comments:
+          <p id= "TVviews" class="counter">Views:
+          <p id= "TVdownloads" class="counter">Downloads:
+          <p id= "TVlikes" class="counter">Likes:
+          <p id= "TVcollects" class="counter">Collects:
+          <p id= "TVmakes" class="counter">Makes:
+          <p id= "TVremixes" class="counter">Remixes:
+          <p id= "TVcomments" class="counter">Comments:
         </div>
         <div id="YoutubeSection" class="StatSection">
           <h1>Youtube</h1>
-          <p if= "YTsuscriptors" class="counter">Suscriptors:
-          <p if= "YTviews" class="counter">Views:
-          <p if= "YTlikes" class="counter">Likes:
-          <p if= "YTdislikes" class="counter">Dislikes:
+          <p id= "YTsuscriptors" class="counter">Suscriptors:
+          <p id= "YTviews" class="counter">Views:
+          <p id= "YTlikes" class="counter">Likes:
+          <p id= "YTdislikes" class="counter">Dislikes:
         </div>
         <div id="HackadaySection" class="StatSection">
           <h1>Hackaday</h1>
-          <p if= "HDfollowers" class="counter">Followers:
-          <p if= "HDlikes" class="counter">Likes:
-          <p if= "HDviews" class="counter">Views:
-          <p if= "HDsuscriptions" class="counter">Suscriptions:
-          <p if= "HDcomments" class="counter">Comments:
+          <p id= "HDfollowers" class="counter">Followers:
+          <p id= "HDlikes" class="counter">Likes:
+          <p id= "HDviews" class="counter">Views:
+          <p id= "HDsuscriptions" class="counter">Suscriptions:
+          <p id= "HDcomments" class="counter">Comments:
         </div>
         <div id="TwitterSection" class="StatSection">
           <h1>Twitter</h1>
-          <p if= "TWfollowers" class="counter">Followers:
+          <p id= "TWfollowers" class="counter">Followers:
+          <p id= "TWlikes" class="counter">Likes:
+          <p id= "TWretweets" class="counter">Retweets:
+          <p id= "TWcomments" class="counter">Comments:
         </div>
         <div id="GoogleGroupsSection" class="StatSection">
           <h1>Google Groups</h1>
-          <p if= "GGmembers" class="counter">Members:
-          <p if= "GGthreads" class="counter">Threads:
+          <p id= "GGmembers" class="counter">Members:
+          <p id= "GGthreads" class="counter">Threads:
         </div>
         <div id="InstagramSection" class="StatSection">
           <h1>Instagram</h1>
-          <p if= "IGfollowers" class="counter">Followers:
-          <p if= "IGlikes" class="counter">Likes:
-          <p if= "IGreproductions" class="counter">Reproductions:
-          <p if= "IGcomments" class="counter">Comments:
+          <p id= "IGfollowers" class="counter">Followers:
+          <p id= "IGlikes" class="counter">Likes:
+          <p id= "IGreproductions" class="counter">Reproductions:
+          <p id= "IGcomments" class="counter">Comments:
         </div>
   </div>
   <div class="footer">

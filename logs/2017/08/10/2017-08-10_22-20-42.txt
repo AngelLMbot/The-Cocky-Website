@@ -5,12 +5,12 @@ Followers: 33
 Watchers: 80
 Stars: 237
 Forks: 57
-Contributors: 7
+Contributors: 3
 
 ----------
 Thingiverse
 ----------
-Views: 118089
+Views: 118100
 Downloads: 18260
 Likes: 2850
 Collects: 2964
@@ -39,9 +39,9 @@ Comments: 43
 Twitter
 ----------
 Followers: 409
-Likes: 0
-Retweets: 0
-Comments: 0
+Likes: 1849
+Retweets: 877
+Comments: 169
 
 ----------
 Google Groups
