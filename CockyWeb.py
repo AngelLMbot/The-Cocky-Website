@@ -53,8 +53,10 @@ dayYesterday = yesterdayDate.strftime("%d")
 
 pathYesterday = 'logs/' + yearYesterday + '/' + monthYesterday + '/' + dayYesterday + '/' + '*.txt'
 filesPath = glob.glob(pathYesterday)
+filesPath.sort()
 
 Fyesterday = open(filesPath[len(filesPath)-1], "r")
+
 statsYesterday = re.findall(r'\d+', Fyesterday.read())
 
 for k in range(len(statsYesterday)):
