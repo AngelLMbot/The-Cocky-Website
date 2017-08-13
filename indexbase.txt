@@ -31,7 +31,7 @@
         </div>
         <div id="YoutubeSection" class="StatSection">
           <h1>Youtube</h1>
-          <p id= "YTsuscriptors" class="counter">Suscriptors: !!!
+          <p id= "YTSubscriptors" class="counter">Subscriptors: !!!
           <p id= "YTviews" class="counter">Views: !!!
           <p id= "YTlikes" class="counter">Likes: !!!
           <p id= "YTdislikes" class="counter">Dislikes: !!!
@@ -41,7 +41,7 @@
           <p id= "HDfollowers" class="counter">Followers: !!!
           <p id= "HDlikes" class="counter">Likes: !!!
           <p id= "HDviews" class="counter">Views: !!!
-          <p id= "HDsuscriptions" class="counter">Suscriptions: !!!
+          <p id= "HDSubscritions" class="counter">Subscritions: !!!
           <p id= "HDcomments" class="counter">Comments: !!!
         </div>
         <div id="TwitterSection" class="StatSection">

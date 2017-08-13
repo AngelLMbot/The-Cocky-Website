@@ -21,7 +21,7 @@ Comments: !
 ----------
 Youtube
 ----------
-Suscriptors: !
+Subscriptors: !
 Views: !
 Likes: !
 Dislikes: !
@@ -32,7 +32,7 @@ Hackaday
 Followers: !
 Likes: !
 Views: !
-Suscriptions: !
+Subscritions: !
 Comments: !
 
 ----------
