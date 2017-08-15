@@ -22,7 +22,6 @@ TWuser = '_AngelLM'                                     # Twitter username. http
 GGname = 'thor-opensource-3d-printable-robotic-arm'     # Google Group name. https://groups.google.com/forum/#!forum/GROUPNAME
 IGuser = 'angel_lm_'                                    # Instagram username. https://www.instagram.com/
 
-
 separator=''
 
 Fbase = open("indexbase.txt", "r")
@@ -117,6 +116,7 @@ except OSError as e:
 Flog = open(PathNow, "w+")
 Flog.write(Logbasejoined)
 Flog.close()
+
 
 call(["git", "add", "./"])
 call(["git", "commit", "-m", "Automatic commit "+dateNowStr])
