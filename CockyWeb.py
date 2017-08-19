@@ -30,14 +30,13 @@ Fbase.close()
 
 Fsplitted = Textbase.split("!!!")
 
+IGstats = instagram.getStats(IGuser)
+GGstats = googlegroups.getStats(GGname)
+TWstats = twitter.getStats(TWuser)
 GHstats = github.getStats(GHuser)
 TVstats = thingiverse.getStats(TVuser)
 YTstats = youtube.getStats(YTuser)
 HDstats = hackaday.getStats(HDuser)
-TWstats = twitter.getStats(TWuser)
-GGstats = googlegroups.getStats(GGname)
-IGstats = instagram.getStats(IGuser)
-
 
 dateNow=datetime.now()
 dateNowStr =  dateNow.strftime('%Y-%m-%d %H:%M:%S')
