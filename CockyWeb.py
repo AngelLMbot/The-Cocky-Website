@@ -30,9 +30,9 @@ Fbase.close()
 
 Fsplitted = Textbase.split("!!!")
 
+YTstats = youtube.getStats(YTuser)
 IGstats = instagram.getStats(IGuser)
 GGstats = googlegroups.getStats(GGname)
-YTstats = youtube.getStats(YTuser)
 TWstats = twitter.getStats(TWuser)
 GHstats = github.getStats(GHuser)
 TVstats = thingiverse.getStats(TVuser)

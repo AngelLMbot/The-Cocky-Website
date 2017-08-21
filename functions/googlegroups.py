@@ -8,18 +8,26 @@ import re
 
 
 def getStats(GGname):
+
     GGescapedUrl='https://groups.google.com/forum/?_escaped_fragment_=forum/' + GGname
 
     driver = webdriver.Firefox()
     driver.get('https://groups.google.com/forum/#!aboutgroup/' + GGname)
     #try:
-    element = WebDriverWait(driver, 15).until(
+    element = WebDriverWait(driver, 50).until(
         EC.visibility_of_element_located((By.CLASS_NAME, "F0XO1GC-b-Jb"))
     )
 
-    elem = driver.find_elements_by_tag_name("div")
-    divtext = elem[113].text
-    GGmembers = int(divtext.split()[110])
+    dataObtained = False
+    while not dataObtained:
+        try:
+            elem = driver.find_elements_by_tag_name("div")
+            divtext = elem[113].text
+            GGmembers = int(divtext.split()[110])
+            dataObtained = True
+        except:
+            pass
+
     driver.close()
 
     req = urllib2.Request(GGescapedUrl, headers={ 'User-Agent': 'Mozilla/5.0' })

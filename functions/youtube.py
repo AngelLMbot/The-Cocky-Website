@@ -3,7 +3,7 @@ import urllib2
 
 def getStats(YTuser):
     YTurl = 'https://www.youtube.com/' + YTuser
-    preurl = 'https://www.youtube.com'
+    preurl = 'https://es.youtube.com'
     urlList = []
     YTlikes = 0
     YTdislikes =0
