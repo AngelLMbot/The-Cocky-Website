@@ -16,39 +16,44 @@ def getStats(IGuser):
     IGcomments = 0
     IGlikes = 0
 
+    dataObtained = False
+    while not dataObtained:
+        try:
+            driver = webdriver.Firefox()
+            driver.get(IGurl)
+            IGTags = driver.find_elements_by_tag_name("span")
+            IGTotalUploads = int(IGTags[3].text)
+            IGTotalFollowers = int(IGTags[5].text)
+            if IGTotalUploads > 12:
+                FindButton = driver.find_elements_by_tag_name("a")
+                for but in FindButton:
+                    if "?max_id" in but.get_attribute("href"):
+                        button = but
+                button.click()
 
-    driver = webdriver.Firefox()
-    driver.get(IGurl)
+            urls = driver.find_elements_by_tag_name("a")
+            for i in urls:
+                if "?taken-by" in i.get_attribute("href"):
+                    parent1=i.find_element_by_xpath('..')
+                    parent2=parent1.find_element_by_xpath('..')
+                    classPhoto = parent1.get_attribute("class").split()[0]
+                    classRow = parent2.get_attribute("class")
+                    break
 
-    IGTags = driver.find_elements_by_tag_name("span")
-    IGTotalUploads = int(IGTags[3].text)
-    IGTotalFollowers = int(IGTags[5].text)
+            while len(driver.find_elements_by_class_name(classRow)) < math.ceil(IGTotalUploads/3.0):
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-    if IGTotalUploads > 12:
-        FindButton = driver.find_elements_by_tag_name("a")
-        for but in FindButton:
-            if "?max_id" in but.get_attribute("href"):
-                button = but
-        button.click()
+            photos = driver.find_elements_by_class_name(classPhoto)
 
-    urls = driver.find_elements_by_tag_name("a")
-    for i in urls:
-        if "?taken-by" in i.get_attribute("href"):
-            parent1=i.find_element_by_xpath('..')
-            parent2=parent1.find_element_by_xpath('..')
-            classPhoto = parent1.get_attribute("class").split()[0]
-            classRow = parent2.get_attribute("class")
-            break
+            for f in photos:
+                 IGurls.append(f.find_element_by_tag_name("a").get_attribute("href"))
 
-    while len(driver.find_elements_by_class_name(classRow)) < math.ceil(IGTotalUploads/3.0):
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
-    photos = driver.find_elements_by_class_name(classPhoto)
-
-    for f in photos:
-         IGurls.append(f.find_element_by_tag_name("a").get_attribute("href"))
-
-    driver.close()
+            driver.close()
+            dataObtained = True
+            
+        except:
+            driver.close()
+            pass
 
     for url in IGurls:
         req = urllib2.Request(url, headers={ 'User-Agent': 'Mozilla/5.0' })
