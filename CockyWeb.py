@@ -13,6 +13,9 @@ from time import time, gmtime, strftime
 from datetime import date, timedelta, datetime
 import glob
 import os, errno
+import time
+
+tic=time.time()
 
 TVuser = 'AngelLM'                                      # Thingiverse username. https://www.thingiverse.com/USERNAME/
 GHuser = 'AngelLM'                                      # GitHub username. https://github.com/USERNAME
@@ -119,3 +122,7 @@ Flog.close()
 call(["git", "add", "./"])
 call(["git", "commit", "-m", "Automatic commit "+dateNowStr])
 call(["git", "push", "origin", "master"])
+
+toc = time.time()
+
+print "Processing time (s): " + str(toc-tic)  

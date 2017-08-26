@@ -14,8 +14,10 @@ def getStats(TWuser):
     TWlikes = 0
     TWretweets = 0
     TWcomments = 0
-
-    driver = webdriver.Firefox()
+    
+    profile = webdriver.FirefoxProfile()
+    profile.set_preference('permissions.default.image', 2)
+    driver = webdriver.Firefox(profile)
     driver.get(TWurl)
 
     TWname = driver.find_element_by_class_name('ProfileHeaderCard-nameLink').text

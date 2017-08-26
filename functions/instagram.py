@@ -15,17 +15,20 @@ def getStats(IGuser):
     IGreproductions = 0
     IGcomments = 0
     IGlikes = 0
+    profile = webdriver.FirefoxProfile()
+    profile.set_preference('permissions.default.image', 2)
 
     dataObtained = False
     while not dataObtained:
         try:
-            driver = webdriver.Firefox()
+            driver = webdriver.Firefox(profile)
             driver.get(IGurl)
             IGTags = driver.find_elements_by_tag_name("span")
             IGTotalUploads = int(IGTags[3].text)
             IGTotalFollowers = int(IGTags[5].text)
             if IGTotalUploads > 12:
-                FindButton = driver.find_elements_by_tag_name("a")
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                FindButton = driver.find_elements_by_tag_name("a") 
                 for but in FindButton:
                     if "?max_id" in but.get_attribute("href"):
                         button = but
