@@ -1,12 +1,5 @@
 import sys
-import re
-from subprocess import call
-from time import time, gmtime, strftime
-from datetime import date, timedelta, datetime
-import glob
-import os, errno
-import time
-sys.path.append("/home/angellm/repos/The-Cocky-Website/functions")
+sys.path.append("functions")
 import thingiverse
 import github
 import hackaday
@@ -15,9 +8,12 @@ import twitter
 import googlegroups
 import instagram
 
-repopath = "/home/angellm/repos/The-Cocky-Website/"
-
-tic=time.time()
+import re
+from subprocess import call
+from time import time, gmtime, strftime
+from datetime import date, timedelta, datetime
+import glob
+import os, errno
 
 TVuser = 'AngelLM'                                      # Thingiverse username. https://www.thingiverse.com/USERNAME/
 GHuser = 'AngelLM'                                      # GitHub username. https://github.com/USERNAME
@@ -29,27 +25,19 @@ IGuser = 'angel_lm_'                                    # Instagram username. ht
 
 separator=''
 
-Fbase = open(repopath + "indexbase.txt", "r")
+Fbase = open("indexbase.txt", "r")
 Textbase = Fbase.read()
 Fbase.close()
 
 Fsplitted = Textbase.split("!!!")
-print "indexbase.html splitted at " + str(time.time()-tic) + "s"
 
 YTstats = youtube.getStats(YTuser)
-print "Youtube stats taken at " + str(time.time()-tic) + "s"
 IGstats = instagram.getStats(IGuser)
-print "Instagram stats taken at " + str(time.time()-tic) + "s"
 GHstats = github.getStats(GHuser)
-print "GitHub stats taken at " + str(time.time()-tic) + "s"
 GGstats = googlegroups.getStats(GGname)
-print "Google Groups stats taken at " + str(time.time()-tic) + "s"
 TWstats = twitter.getStats(TWuser)
-print "Twitter stats taken at " + str(time.time()-tic) + "s"
 TVstats = thingiverse.getStats(TVuser)
-print "Thingiverse stats taken at " + str(time.time()-tic) + "s"
 HDstats = hackaday.getStats(HDuser)
-print "Hackaday stats taken at " + str(time.time()-tic) + "s"
 
 
 dateNow=datetime.now()
@@ -63,7 +51,7 @@ yearYesterday = yesterdayDate.strftime("%Y")
 monthYesterday = yesterdayDate.strftime("%m")
 dayYesterday = yesterdayDate.strftime("%d")
 
-pathYesterday = repopath + 'logs/' + yearYesterday + '/' + monthYesterday + '/' + dayYesterday + '/' + '*.txt'
+pathYesterday = 'logs/' + yearYesterday + '/' + monthYesterday + '/' + dayYesterday + '/' + '*.txt'
 filesPath = glob.glob(pathYesterday)
 filesPath.sort()
 
@@ -97,13 +85,13 @@ Fsplitted[len(Fsplitted)-2]=Fsplitted[len(Fsplitted)-2]+dateNowStr+ ' (GMT+1)' +
 Fjoined = separator.join(Fsplitted)
 
 
-Ffinal = open(repopath + "index.html", "w")
+Ffinal = open("index.html", "w")
 Ffinal.write(Fjoined)
 Ffinal.close()
 
 
 
-Flogbase = open(repopath + "logs/logbase.txt", "r")
+Flogbase = open("logs/logbase.txt", "r")
 Logbase = Flogbase.read()
 Flogbase.close()
 LogbaseSplitted = Logbase.split("!")
@@ -117,7 +105,7 @@ monthNow = dateNow.strftime("%m")
 dayNow = dateNow.strftime("%d")
 FullDateNow = dateNow.strftime('%Y-%m-%d_%H-%M-%S')
 
-PathFolder = repopath + 'logs/' + yearNow + '/' + monthNow + '/' + dayNow
+PathFolder = 'logs/' + yearNow + '/' + monthNow + '/' + dayNow
 PathNow = PathFolder + '/' + FullDateNow + '.txt'
 
 try:
@@ -130,12 +118,6 @@ Flog = open(PathNow, "w+")
 Flog.write(Logbasejoined)
 Flog.close()
 
-print "antes del push"
-os.chdir(repopath)
 call(["git", "add", "./"])
 call(["git", "commit", "-m", "Automatic commit "+dateNowStr])
 call(["git", "push", "origin", "master"])
-print "despues del push"
-toc = time.time()
-
-print "Processing time (s): " + str(toc-tic)  
