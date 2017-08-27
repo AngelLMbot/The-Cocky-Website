@@ -27,6 +27,6 @@ TWuser = '_AngelLM'                                     # Twitter username. http
 GGname = 'thor-opensource-3d-printable-robotic-arm'     # Google Group name. https://groups.google.com/forum/#!forum/GROUPNAME
 IGuser = 'angel_lm_'                                    # Instagram username. https://www.instagram.com/
 
-YTstats = youtube.getStats(YTuser)
+GGstats = googlegroups.getStats(GGname)
 
-print YTstats
+print GGstats

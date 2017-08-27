@@ -15,6 +15,7 @@ def getStats(IGuser):
     IGreproductions = 0
     IGcomments = 0
     IGlikes = 0
+
     profile = webdriver.FirefoxProfile()
     profile.set_preference('permissions.default.image', 2)
     dataObtained = False

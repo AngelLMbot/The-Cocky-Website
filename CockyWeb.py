@@ -40,16 +40,18 @@ YTstats = youtube.getStats(YTuser)
 print "Youtube stats taken at " + str(time.time()-tic) + "s"
 IGstats = instagram.getStats(IGuser)
 print "Instagram stats taken at " + str(time.time()-tic) + "s"
+GHstats = github.getStats(GHuser)
+print "GitHub stats taken at " + str(time.time()-tic) + "s"
 GGstats = googlegroups.getStats(GGname)
 print "Google Groups stats taken at " + str(time.time()-tic) + "s"
 TWstats = twitter.getStats(TWuser)
 print "Twitter stats taken at " + str(time.time()-tic) + "s"
-GHstats = github.getStats(GHuser)
-print "GitHub stats taken at " + str(time.time()-tic) + "s"
 TVstats = thingiverse.getStats(TVuser)
 print "Thingiverse stats taken at " + str(time.time()-tic) + "s"
 HDstats = hackaday.getStats(HDuser)
 print "Hackaday stats taken at " + str(time.time()-tic) + "s"
+
+
 dateNow=datetime.now()
 dateNowStr =  dateNow.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -132,7 +134,7 @@ print "antes del push"
 os.chdir(repopath)
 call(["git", "add", "./"])
 call(["git", "commit", "-m", "Automatic commit "+dateNowStr])
-#call(["git", "push", "origin", "master"])
+call(["git", "push", "origin", "master"])
 print "despues del push"
 toc = time.time()
 
