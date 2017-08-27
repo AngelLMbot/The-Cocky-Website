@@ -17,11 +17,10 @@ def getStats(IGuser):
     IGlikes = 0
     profile = webdriver.FirefoxProfile()
     profile.set_preference('permissions.default.image', 2)
-
     dataObtained = False
+    driver = webdriver.Firefox(profile)
     while not dataObtained:
         try:
-            driver = webdriver.Firefox(profile)
             driver.get(IGurl)
             IGTags = driver.find_elements_by_tag_name("span")
             IGTotalUploads = int(IGTags[3].text)
@@ -53,9 +52,10 @@ def getStats(IGuser):
 
             driver.close()
             dataObtained = True
-            
+
         except:
             driver.close()
+            driver = webdriver.Firefox(profile)
             pass
 
     for url in IGurls:

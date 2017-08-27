@@ -1,13 +1,4 @@
 import sys
-repopath = "/home/angellm/repos/The-Cocky-Website/"
-sys.path.append(repopath + "functions")
-import thingiverse
-import github
-import hackaday
-import youtube
-import twitter
-import googlegroups
-import instagram
 import re
 from subprocess import call
 from time import time, gmtime, strftime
@@ -15,6 +6,16 @@ from datetime import date, timedelta, datetime
 import glob
 import os, errno
 import time
+sys.path.append("/home/angellm/repos/The-Cocky-Website/functions")
+import thingiverse
+import github
+import hackaday
+import youtube
+import twitter
+import googlegroups
+import instagram
+
+repopath = "/home/angellm/repos/The-Cocky-Website/"
 
 tic=time.time()
 
@@ -33,14 +34,22 @@ Textbase = Fbase.read()
 Fbase.close()
 
 Fsplitted = Textbase.split("!!!")
+print "indexbase.html splitted at " + str(time.time()-tic) + "s"
 
 YTstats = youtube.getStats(YTuser)
+print "Youtube stats taken at " + str(time.time()-tic) + "s"
 IGstats = instagram.getStats(IGuser)
+print "Instagram stats taken at " + str(time.time()-tic) + "s"
 GGstats = googlegroups.getStats(GGname)
+print "Google Groups stats taken at " + str(time.time()-tic) + "s"
 TWstats = twitter.getStats(TWuser)
+print "Twitter stats taken at " + str(time.time()-tic) + "s"
 GHstats = github.getStats(GHuser)
+print "GitHub stats taken at " + str(time.time()-tic) + "s"
 TVstats = thingiverse.getStats(TVuser)
+print "Thingiverse stats taken at " + str(time.time()-tic) + "s"
 HDstats = hackaday.getStats(HDuser)
+print "Hackaday stats taken at " + str(time.time()-tic) + "s"
 dateNow=datetime.now()
 dateNowStr =  dateNow.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -119,11 +128,12 @@ Flog = open(PathNow, "w+")
 Flog.write(Logbasejoined)
 Flog.close()
 
+print "antes del push"
 os.chdir(repopath)
 call(["git", "add", "./"])
 call(["git", "commit", "-m", "Automatic commit "+dateNowStr])
-call(["git", "push", "origin", "master"])
-
+#call(["git", "push", "origin", "master"])
+print "despues del push"
 toc = time.time()
 
 print "Processing time (s): " + str(toc-tic)  
