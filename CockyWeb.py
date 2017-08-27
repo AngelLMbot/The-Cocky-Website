@@ -1,5 +1,6 @@
 import sys
-sys.path.append("functions")
+repopath = "/home/angellm/repos/The-Cocky-Website/"
+sys.path.append(repopath + "functions")
 import thingiverse
 import github
 import hackaday
@@ -27,7 +28,7 @@ IGuser = 'angel_lm_'                                    # Instagram username. ht
 
 separator=''
 
-Fbase = open("indexbase.txt", "r")
+Fbase = open(repopath + "indexbase.txt", "r")
 Textbase = Fbase.read()
 Fbase.close()
 
@@ -51,7 +52,7 @@ yearYesterday = yesterdayDate.strftime("%Y")
 monthYesterday = yesterdayDate.strftime("%m")
 dayYesterday = yesterdayDate.strftime("%d")
 
-pathYesterday = 'logs/' + yearYesterday + '/' + monthYesterday + '/' + dayYesterday + '/' + '*.txt'
+pathYesterday = repopath + 'logs/' + yearYesterday + '/' + monthYesterday + '/' + dayYesterday + '/' + '*.txt'
 filesPath = glob.glob(pathYesterday)
 filesPath.sort()
 
@@ -85,13 +86,13 @@ Fsplitted[len(Fsplitted)-2]=Fsplitted[len(Fsplitted)-2]+dateNowStr+ ' (GMT+1)' +
 Fjoined = separator.join(Fsplitted)
 
 
-Ffinal = open("index.html", "w")
+Ffinal = open(repopath + "index.html", "w")
 Ffinal.write(Fjoined)
 Ffinal.close()
 
 
 
-Flogbase = open("logs/logbase.txt", "r")
+Flogbase = open(repopath + "logs/logbase.txt", "r")
 Logbase = Flogbase.read()
 Flogbase.close()
 LogbaseSplitted = Logbase.split("!")
@@ -105,7 +106,7 @@ monthNow = dateNow.strftime("%m")
 dayNow = dateNow.strftime("%d")
 FullDateNow = dateNow.strftime('%Y-%m-%d_%H-%M-%S')
 
-PathFolder = 'logs/' + yearNow + '/' + monthNow + '/' + dayNow
+PathFolder = repopath + 'logs/' + yearNow + '/' + monthNow + '/' + dayNow
 PathNow = PathFolder + '/' + FullDateNow + '.txt'
 
 try:
@@ -118,7 +119,7 @@ Flog = open(PathNow, "w+")
 Flog.write(Logbasejoined)
 Flog.close()
 
-
+os.chdir(repopath)
 call(["git", "add", "./"])
 call(["git", "commit", "-m", "Automatic commit "+dateNowStr])
 call(["git", "push", "origin", "master"])
