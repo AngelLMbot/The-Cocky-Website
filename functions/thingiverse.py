@@ -40,9 +40,9 @@ def getStats(TVuser):
         TVcollects += int(TVstats[1].text)
         TVcomments += int(TVstats[2].text)
         TVmakes += int(TVstats[3].text)
-        TVremixes += int(TVstats[8].text)
-        TVviews += int(TVstats[9].text)
-        TVdownloads += int(TVstats[11].text)
+        TVremixes += int(TVstats[9].text)
+        TVviews += int(TVstats[10].text)
+        TVdownloads += int(TVstats[12].text)
 
     TVarray = [TVviews, TVdownloads, TVlikes, TVcollects, TVmakes, TVremixes, TVcomments]
     return TVarray;

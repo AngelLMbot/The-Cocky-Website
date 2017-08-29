@@ -31,13 +31,54 @@ Fbase.close()
 
 Fsplitted = Textbase.split("!!!")
 
-YTstats = youtube.getStats(YTuser)
-IGstats = instagram.getStats(IGuser)
-GHstats = github.getStats(GHuser)
-GGstats = googlegroups.getStats(GGname)
-TWstats = twitter.getStats(TWuser)
-TVstats = thingiverse.getStats(TVuser)
-HDstats = hackaday.getStats(HDuser)
+try:
+    YTstats = youtube.getStats(YTuser)
+except Exception as yte:
+    dateError=datetime.now()
+    dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
+    print "[Youtube exception] - " + dateNowStr + " - " + str(yte)
+
+try:
+    IGstats = instagram.getStats(IGuser)
+except Exception as ige:
+    dateError=datetime.now()
+    dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
+    print "[Instagram exception] - " + dateNowStr + " - " + str(ige)
+
+try:
+    GHstats = github.getStats(GHuser)
+except Exception as ghe:
+    dateError=datetime.now()
+    dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
+    print "[GitHub exception] - " + dateNowStr + " - " + str(ghe)
+
+try:
+    GGstats = googlegroups.getStats(GGname)
+except Exception as gge:
+    dateError=datetime.now()
+    dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
+    print "[Google Groups exception] - " + dateNowStr + " - " + str(gge)
+
+try:
+    TWstats = twitter.getStats(TWuser)
+except Exception as twe:
+    dateError=datetime.now()
+    dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
+    print "[Twitter exception] - " + dateNowStr + " - " + str(twe)
+
+try:
+    TVstats = thingiverse.getStats(TVuser)
+except Exception as tve:
+    dateError=datetime.now()
+    dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
+    print "[Thingiverse exception] - " + dateNowStr + " - " + str(tve)
+
+try:
+    HDstats = hackaday.getStats(HDuser)
+except Exception as hde:
+    dateError=datetime.now()
+    dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
+    print "[Hackaday exception] - " + dateNowStr + " - " + str(hde)
 
 
 dateNow=datetime.now()
