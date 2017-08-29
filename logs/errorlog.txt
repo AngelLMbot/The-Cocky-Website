@@ -1,0 +1,6 @@
+[Instagram exception] - 2017-08-29 18:35:23 - Message: connection refused
+
+[Google Groups exception] - 2017-08-29 18:36:43 - Message: connection refused
+
+[Twitter exception] - 2017-08-29 18:37:45 - Message: connection refused
+

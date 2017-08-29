@@ -36,49 +36,49 @@ try:
 except Exception as yte:
     dateError=datetime.now()
     dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
-    print "[Youtube exception] - " + dateNowStr + " - " + str(yte)
+    print "[Youtube exception] - " + dateErrorStr + " - " + str(yte)
 
 try:
     IGstats = instagram.getStats(IGuser)
 except Exception as ige:
     dateError=datetime.now()
     dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
-    print "[Instagram exception] - " + dateNowStr + " - " + str(ige)
+    print "[Instagram exception] - " + dateErrorStr + " - " + str(ige)
 
 try:
     GHstats = github.getStats(GHuser)
 except Exception as ghe:
     dateError=datetime.now()
     dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
-    print "[GitHub exception] - " + dateNowStr + " - " + str(ghe)
+    print "[GitHub exception] - " + dateErrorStr + " - " + str(ghe)
 
 try:
     GGstats = googlegroups.getStats(GGname)
 except Exception as gge:
     dateError=datetime.now()
     dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
-    print "[Google Groups exception] - " + dateNowStr + " - " + str(gge)
+    print "[Google Groups exception] - " + dateErrorStr + " - " + str(gge)
 
 try:
     TWstats = twitter.getStats(TWuser)
 except Exception as twe:
     dateError=datetime.now()
     dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
-    print "[Twitter exception] - " + dateNowStr + " - " + str(twe)
+    print "[Twitter exception] - " + dateErrorStr + " - " + str(twe)
 
 try:
     TVstats = thingiverse.getStats(TVuser)
 except Exception as tve:
     dateError=datetime.now()
     dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
-    print "[Thingiverse exception] - " + dateNowStr + " - " + str(tve)
+    print "[Thingiverse exception] - " + dateErrorStr + " - " + str(tve)
 
 try:
     HDstats = hackaday.getStats(HDuser)
 except Exception as hde:
     dateError=datetime.now()
     dateErrorStr =  dateError.strftime('%Y-%m-%d %H:%M:%S')
-    print "[Hackaday exception] - " + dateNowStr + " - " + str(hde)
+    print "[Hackaday exception] - " + dateErrorStr + " - " + str(hde)
 
 
 dateNow=datetime.now()
