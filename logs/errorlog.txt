@@ -199,3 +199,8 @@
 [master b61c71a] Automatic commit 2017-08-30 11:41:28
  3 files changed, 64 insertions(+), 3 deletions(-)
  create mode 100644 logs/2017/08/30/2017-08-30_11-41-28.txt
+[master 2c26b87] Automatic commit 2017-08-30 11:56:35
+ 3 files changed, 65 insertions(+), 4 deletions(-)
+ create mode 100644 logs/2017/08/30/2017-08-30_11-56-35.txt
+[Instagram exception] - 2017-08-30 12:06:22 - [Errno 104] Connection reset by peer
+[Youtube exception] - 2017-08-30 12:16:57 - list index out of range
