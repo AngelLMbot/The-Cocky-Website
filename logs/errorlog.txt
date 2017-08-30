@@ -247,3 +247,7 @@
 [master afcd61c] Automatic commit 2017-08-30 16:28:33
  3 files changed, 63 insertions(+), 2 deletions(-)
  create mode 100644 logs/2017/08/30/2017-08-30_16-28-33.txt
+[master ec9f58f] Automatic commit 2017-08-30 16:43:21
+ 3 files changed, 65 insertions(+), 4 deletions(-)
+ create mode 100644 logs/2017/08/30/2017-08-30_16-43-21.txt
+[Instagram exception] - 2017-08-30 16:51:17 - [Errno 104] Connection reset by peer
