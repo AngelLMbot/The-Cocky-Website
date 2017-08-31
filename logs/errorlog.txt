@@ -399,3 +399,7 @@
 [master 8037d74] Automatic commit 2017-08-31 10:42:04
  3 files changed, 65 insertions(+), 3 deletions(-)
  create mode 100644 logs/2017/08/31/2017-08-31_10-42-04.txt
+[master ad38793] Automatic commit 2017-08-31 10:57:05
+ 3 files changed, 67 insertions(+), 6 deletions(-)
+ create mode 100644 logs/2017/08/31/2017-08-31_10-57-05.txt
+[Youtube exception] - 2017-08-31 11:02:34 - list index out of range
